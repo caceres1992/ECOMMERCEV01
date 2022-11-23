@@ -1,26 +1,23 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@layer components {
+    .btnPrimary {
+        @apply bg-rose-500 px-4 py-2 rounded-md text-gray-100 mt-5
+         hover:bg-rose-600 hover:text-white transition-all ease-in-out text-sm font-semibold
+    }
+    .btnSecundary {
+        @apply bg-black px-4 py-2 rounded-md text-gray-100 mt-5
+         hover:bg-gray-900 hover:text-white transition-all ease-in-out text-sm font-semibold
+    }
+  .btnAdd{
+    @apply border w-full sm:w-64 py-2 border-rose-500 text-rose-500 font-medium hover:scale-105 transition-all ease-in-out
   }
-  body {
-    color: white;
-    background: black;
+
+  .btnBuy{
+    @apply bg-rose-500 w-full sm:w-64 py-2 border border-rose-500 text-white font-medium
   }
+    
 }
